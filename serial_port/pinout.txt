@@ -1,0 +1,6 @@
+The serial port is accessed via the CN1 (white) 4 pin header.
+
+From the side of the motherboard the pin layout is:
+
+| TX  N/A |
+| RX  GND |
