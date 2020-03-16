@@ -1,0 +1,49 @@
+Whitney # printenv
+bootcmd=
+baudrate=38400
+port=0
+boardtest_state_memory=none
+model_name=whitney_2bay
+cpu_clock=700
+mfgmodel=halfdome
+bootfile="/tftpboot/uImage"
+tftp_bsize=512
+udp_frag_size=512
+whitney_state=saved
+serial_number=5564S01001G30700361J0A1
+opid=Z12101594
+ethaddr=00:10:75:38:XX:XX
+serialNo=NA6F0413
+ethaddr0=00:10:75:38:XX:XX
+ethaddr1=00:10:75:38:XX:XX
+modelname=1BW5A1-570
+mfgtest_state=final_tested_ok
+tftp_path=halfdome/bootimage
+raclient_leaseExpires=2013-09-30T14:18:17Z
+raclient_securityKey=Dhgk+fLSUoqI65NINo5gAQ==
+current_kernel=kernel1
+rtclog=511dfd05
+bootargs_orig=root=/dev/mtdblock0 mem=256M console=ttyS0
+netboot_cmd_orig=tftp 0x4000000 bootpImage; go 0x4000000
+netboot_cmd=run bootcmd_scsi
+bootcmd_scsi=scsi init;run loaduimage;bootm 0x28000000
+netboot=1
+bootargs_scsi=console=ttyS0,38400 mem=512M@0x20000000 root=/dev/sda1 rootwait
+bootargs=console=ttyS0,38400 mem=512M@0x20000000 root=/dev/sda1 rootwait
+loaduimage=ext2load scsi 0 0x28000000 /␛[3~␛/uImage.gw
+tftp_serverip=192.168.1.13
+bootcmd_load=tftp 0x800000 uImage
+num_boot_tries=3
+bootargs_console=console=ttyS0,38400
+bootdelay=15
+bootargs_root=root=/dev/sda3 rootwait mem=512M
+filesize=420000
+fileaddr=800000
+netmask=255.255.0.0
+ipaddr=192.168.1.66
+serverip=192.168.1.13
+bootcmd_run=bootm 0x800000
+stdin=serial
+stdout=serial
+stderr=serial
+verify=n

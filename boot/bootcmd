@@ -1,0 +1,34 @@
+Credits for this step to Yama and bodhi
+
+https://forum.doozan.com/profile.php?2,1496
+https://forum.doozan.com/profile.php?2,297
+
+#Next four lines only for tftp booting
+
+setenv boot_file <path to uImage>
+setenv initrd_file <path to initrd>
+setenv serverip 192.168.1.102
+setenv tftp_serverip 192.168.1.102
+setenv ipaddr 192.168.1.103
+setenv bootcmd_load 'tftp 0x800000 $(boot_file);tftp 0x1100000 $(initrd_file)'
+
+#Next one line only for loading from drive
+setenv bootcmd_load 'scsi init;ext2load scsi 0 0x800000 /uImage;ext2load scsi 0 0x1100000 /uInitrd'
+
+setenv stdin serial
+setenv stdout serial
+setenv stderr serial
+setenv verify n
+setenv num_boot_tries 3
+setenv bootargs_console console=ttyS0,38400
+setenv bootdelay 15
+setenv bootargs_root root=/dev/sda3 rootwait mem=256M
+setenv arcNumber 2776i
+setenv bootcmd 'setenv bootargs $(bootargs_console) $(bootargs_root);run bootcmd_load;bootm 0x800000 0x1100000'
+run bootcmd
+~                                                                                                                        
+
+tftp 0x800000 uImage.sda3
+tftp 0x1100000 uInitrd
+scsi init
+

@@ -1,0 +1,4 @@
+export CROSS_COMPILE=arm-none-eabi-
+export ARCH=arm
+export LOADADDR=0x02000000 
+

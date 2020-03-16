@@ -1,0 +1,37 @@
+The serial port is accessed via the CN1 (white) 4 pin header.
+
+From the side of the motherboard the pin layout is:
+
+| TX  N/A |
+| RX  GND |
+
+The baudrate is set to 38400
+
+
+boot info
+
+U-Boot 2008.10-mpcore (Nov 11 2012 - 16:30:36)
+Whitney model:(HALFDOME) release v1.2-beta2
+
+CPU: Cavium Networks CNS3000
+ID Code: 410fb024 (Part number: 0xB02, Revision number: 4) 
+CPU ID: 900 
+Chip Version: c
+
+DRAM:  512 MB
+Parallel Flash:  0 kB
+Flash Manufacturer: MX
+Serial Flash: 512 kB
+Serial Flash:
+Bank # 1:  Nb pages: 2048  Page Size: 256
+  Size:    524288 bytes,  Logical address: 0x60000000
+  Area 0: 60000000 to 60FFFFFF      SPI flash
+In:    serial
+Out:   serial
+Err:   serial
+CPU works at 700 MHz (700/1/1)
+DDR2 Speed is 400 MHz 
+Restoring RTC
+Hit any key to stop autoboot:  0 
+Whitney # 
+
